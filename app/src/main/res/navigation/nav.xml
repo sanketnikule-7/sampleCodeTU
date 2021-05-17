@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/vehicleListFragment">
+
+    <fragment
+        android:id="@+id/vehicleListFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleListFragment"
+        android:label="fragment_vehicle_list"
+        tools:layout="@layout/fragment_vehicle_list" >
+        <action
+            android:id="@+id/action_vehicleListFragment_to_vehicleNumberFragment"
+            app:destination="@id/vehicleNumberFragment" />
+        <action
+            android:id="@+id/action_vehicleListFragment_to_vehicleProfileFragment"
+            app:destination="@id/vehicleProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleNumberFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleNumberFragment"
+        android:label="fragment_vehicle_number"
+        tools:layout="@layout/fragment_vehicle_number" >
+        <action
+            android:id="@+id/action_vehicleNumberFragment_to_vehicleClassSelectionFragment"
+            app:destination="@id/vehicleClassSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleClassSelectionFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleClassSelectionFragment"
+        android:label="fragment_vehicle_class_selection"
+        tools:layout="@layout/fragment_vehicle_class_selection" >
+        <action
+            android:id="@+id/action_vehicleClassSelectionFragment_to_vehicleMakeSelectionFragment"
+            app:destination="@id/vehicleMakeSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleMakeSelectionFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleMakeSelectionFragment"
+        android:label="fragment_vehicle_make_selection"
+        tools:layout="@layout/fragment_vehicle_make_selection" >
+        <action
+            android:id="@+id/action_vehicleMakeSelectionFragment_to_vehicleModelSelectionFragment"
+            app:destination="@id/vehicleModelSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleModelSelectionFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleModelSelectionFragment"
+        android:label="fragment_vehicle_model_selection"
+        tools:layout="@layout/fragment_vehicle_model_selection" >
+        <action
+            android:id="@+id/action_vehicleModelSelectionFragment_to_vehicleFuelTypeSelectionFragment"
+            app:destination="@id/vehicleFuelTypeSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleFuelTypeSelectionFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleFuelTypeSelectionFragment"
+        android:label="fragment_vehicle_fuel_type_selection"
+        tools:layout="@layout/fragment_vehicle_fuel_type_selection" >
+        <action
+            android:id="@+id/action_vehicleFuelTypeSelectionFragment_to_vehicleTransmissionSelectionFragment"
+            app:destination="@id/vehicleTransmissionSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleTransmissionSelectionFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleTransmissionSelectionFragment"
+        android:label="fragment_vehicle_transmission_selection"
+        tools:layout="@layout/fragment_vehicle_transmission_selection" />
+    <fragment
+        android:id="@+id/vehicleProfileFragment"
+        android:name="com.admin.turbocaretestassapp.fragment.VehicleProfileFragment"
+        android:label="fragment_vehicle_profile"
+        tools:layout="@layout/fragment_vehicle_profile" />
+</navigation>
